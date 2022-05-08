@@ -8,7 +8,7 @@ Bases: `engine.learners.Learner`
 The *ObjectTracking2DDeepSortLearner* class is a wrapper of the Deep SORT[[1]](#object-tracking-2d-1) implementation found on [ZQPei/deep_sort_pytorch](https://github.com/ZQPei/deep_sort_pytorch)[[2]](#object-tracking-2d-2).
 It can be used to perform 2d object tracking on images and train new models.
 
-The [ObjectTracking2DDeepSortLearner](/src/opendr/perception/object_tracking_2d/fair_mot/object_tracking_2d_fair_mot_learner.py) class has the
+The [ObjectTracking2DDeepSortLearner](/src/opendr/perception/object_tracking_2d/deep_sort/object_tracking_2d_deep_sort_learner.py) class has the
 following public methods:
 
 #### `ObjectTracking2DDeepSortLearner` constructor
@@ -119,7 +119,7 @@ Provided with the path "/my/path/name" (absolute or relative), it creates the "n
 Inside this folder, the model is saved as "name.pth" or "name.onnx" and the metadata file as "name.json".
 If the directory already exists, the files are overwritten.
 
-If [`self.optimize`](/src/opendr/perception/object_tracking_2d/fair_mot/object_tracking_2d_fair_mot_learner.py#L425) was run previously, it saves the optimized ONNX model in a similar fashion with an ".onnx" extension, by copying it from the `self.temp_path` it was saved previously during conversion.
+If [`self.optimize`](/src/opendr/perception/object_tracking_2d/deep_sort/object_tracking_2d_deep_sort_learner.py#L291) was run previously, it saves the optimized ONNX model in a similar fashion with an ".onnx" extension, by copying it from the `self.temp_path` it was saved previously during conversion.
 
 Parameters:
 - **path**: *str*  
